@@ -1,0 +1,167 @@
+
+    .HeroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    }
+
+    .LoginContainer {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    color: #fff;
+    animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    to {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    }
+
+    .LoginTitle {
+    font-size: 24px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    }
+
+    .InputGroup {
+    position: relative;
+    margin: 20px 0;
+    }
+
+    .InputGroup input {
+    width: 85%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+    }
+
+.InputGroup label {
+  position: absolute;
+  left: 3%;
+  top: 10px;
+  color: #fff;
+  font-size: 16px;  /* Changed from 30px */
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+
+    .InputGroup .EyeIcon {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffdf00;
+    transition: 0.3s;
+    }
+    .InputGroup .EyeIcon:hover {
+    color: #fff;
+    }
+
+    .InputGroup input:focus + label,
+    .InputGroup input:not(:placeholder-shown) + label,
+    .InputGroup .Active {
+    top: -10px;
+    font-size: 12px;
+    color: #ffdf00;
+    }
+
+    .SubmitButton {
+    width: 50%;
+    padding: 8px;
+    margin-top: 15px;
+    background-color: #ffdf00;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+
+    .SubmitButton:hover {
+    background-color: #fff;
+    color: #000;
+    }
+
+    .LoginLinks {
+    margin-top: 20px;
+    font-size: 14px;
+    }
+
+    .LinkText {
+    color: #ffdf00;
+    cursor: pointer;
+    text-decoration: underline;
+    }
+
+    .LinkText:hover {
+    color: #fff;
+    }
+
+/* Gender Group Separate from InputGroup */
+.GenderGroup {
+  margin: 20px 0;
+  text-align: left;
+  width: 85%;
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.GenderGroup > label {
+  font-size: 14px;
+  color: #ffdf00;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.GenderOptions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.GenderOptions label {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+.GenderOptions input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: 6px;
+  position: relative;
+  cursor: pointer;
+}
+
+.GenderOptions input[type="radio"]:checked::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: yellow;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
