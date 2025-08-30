@@ -4,7 +4,11 @@ import Signup from '../components/auth/Signup';
 import HeroLogo from '../assets/herologo.jpg';
 import '../Styles/auth.css';
 
-const Hero = () => {
+interface HeroProps {
+  setAuth: (auth: boolean) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ setAuth }) => {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
@@ -21,7 +25,7 @@ const Hero = () => {
         justifyContent: 'center',
       }}
     >
-      {isLogin ? <Login islogin={isLogin} setislogin={setIsLogin} /> : <Signup islogin={isLogin} setislogin={setIsLogin} />}
+      {isLogin ? <Login islogin={isLogin} setislogin={setIsLogin} setAuth={setAuth}/> : <Signup islogin={isLogin} setislogin={setIsLogin} />}
       
       
     </div>

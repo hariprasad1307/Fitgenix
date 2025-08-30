@@ -1,0 +1,206 @@
+/* MyDiets Container */
+.mydiets-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #0f0f0f;
+  min-height: 100vh;
+}
+
+.mydiets-title {
+  font-size: 2.5rem;
+  color: #ffdf00;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.mydiets-empty {
+  text-align: center;
+  color: #fff;
+  padding: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 1.1rem;
+}
+
+/* Diet Card Styling */
+.diet-card {
+  background: #1e1e2f;
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 223, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.diet-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 223, 0, 0.2);
+}
+
+.diet-card h3 {
+  color: #ffdf00;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 600;
+}
+
+.diet-card h3::before {
+  content: '🏋️‍♂️';
+  font-size: 1.2rem;
+}
+
+.diet-card p {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.diet-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.diet-info span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.diet-info i {
+  color: #ffdf00;
+  font-size: 1.1rem;
+}
+
+/* Table Styling */
+.FoodPlanTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 1.5rem;
+  background: rgba(30, 30, 47, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.FoodPlanTable th {
+  background: rgba(255, 223, 0, 0.1);
+  color: #ffdf00;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid rgba(255, 223, 0, 0.2);
+}
+
+.FoodPlanTable td {
+  padding: 1rem;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.FoodPlanTable tr:last-child td {
+  border-bottom: none;
+}
+
+.FoodPlanTable tbody tr {
+  transition: all 0.2s ease;
+}
+
+.FoodPlanTable tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.FoodPlanTable tbody tr:hover {
+  background: rgba(255, 223, 0, 0.05);
+}
+
+.FoodPlanTable td:first-child {
+  font-weight: 500;
+  color: #ffdf00;
+  text-transform: capitalize;
+}
+
+/* Meal Type Badges */
+.meal-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  background: rgba(255, 223, 0, 0.1);
+  color: #ffdf00;
+  margin-left: 0.5rem;
+}
+
+/* Animation for expanding cards */
+.expand-animation {
+  animation: expandDown 0.3s ease-out forwards;
+}
+
+@keyframes expandDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mydiets-container {
+    padding: 1rem;
+  }
+  
+  .mydiets-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .diet-card {
+    padding: 1rem;
+  }
+  
+  .diet-info {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .FoodPlanTable-container {
+    margin: 1rem -1rem;
+    padding: 0 1rem;
+    overflow-x: auto;
+  }
+  
+  .FoodPlanTable {
+    min-width: 600px;
+  }
+  
+  .FoodPlanTable th,
+  .FoodPlanTable td {
+    padding: 0.8rem;
+  }
+}

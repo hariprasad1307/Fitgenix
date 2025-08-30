@@ -3,7 +3,7 @@ import React from 'react'
 const myprofile = () => {
   return (
     <div>
-      hii
+      hii myprofile
     </div>
   )
 }

@@ -5,10 +5,11 @@ import { useNavigate } from 'react-router-dom';
 interface LoginProps {
   islogin: boolean;
   setislogin:(value:boolean)=>void;
+  setAuth: (auth: boolean) => void;
 }
 
 
-const Login:React.FC<LoginProps> = ({ islogin, setislogin}) => {
+const Login:React.FC<LoginProps> = ({ islogin, setislogin, setAuth }) => {
   const [emailLogin, setEmailLogin] = useState('');
   const [passwordLogin, setPasswordLogin] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -38,7 +39,8 @@ const Login:React.FC<LoginProps> = ({ islogin, setislogin}) => {
     })
     .then((data) => {
       console.log(data);
-      navigate('/myprofile');
+      setAuth(true);  
+      navigate('/');
     })
     .catch((err) => {
       alert(err.message);
