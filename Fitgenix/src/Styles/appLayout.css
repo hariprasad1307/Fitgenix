@@ -1,0 +1,33 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+}
+
+.app-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Adjust specific page containers */
+.DietContainer {
+  padding-top: 0;  /* Remove top padding as navbar provides spacing */
+}
+
+/* Adjust any other page containers that need spacing */
+.ProfileContainer,
+.SettingsContainer,
+.MyDietsContainer {
+  padding-top: 0;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .app-content {
+    padding: 1rem;
+  }
+}

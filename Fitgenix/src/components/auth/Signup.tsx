@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 interface SignupProps {
   islogin: boolean;
   setislogin: (value: boolean) => void;
+  
 }
 
 const Signup: React.FC<SignupProps> = ({ islogin, setislogin }) => {
@@ -50,6 +51,7 @@ const Signup: React.FC<SignupProps> = ({ islogin, setislogin }) => {
     .then((data) => {
       console.log(data);
       alert('Registration Successful!');
+      
       navigate('/login');  // ✅ navigate only if success
     })
     .catch((err) => {

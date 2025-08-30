@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-
+import dietRoutes from './routes/dietRoutes';
 import authRoutes from './routes/authroutes';
 
 dotenv.config();
@@ -21,7 +21,7 @@ mongoose
   .catch((err) => console.log('MongoDB Connection Error:', err));
 
 app.use('/api/auth', authRoutes);
-
+app.use("/api/diets", dietRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
