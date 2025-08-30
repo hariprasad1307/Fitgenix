@@ -1,9 +1,10 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "server.ts", "use": "@vercel/node@3" }
-  ],
+  "functions": {
+    "api/*.py": {
+      "runtime": "@vercel/python@3.9"
+    }
+  },
   "routes": [
-    { "src": "/(.*)", "dest": "server.ts" }
+    { "src": "/api/(.*)", "dest": "api/food.py" }
   ]
 }
