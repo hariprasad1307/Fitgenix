@@ -46,14 +46,14 @@ const Navbar: React.FC<NavbarProps> = ({ setAuth }) => {
               <i className="fas fa-list"></i>
               <span>My Diets</span>
             </Link></li>
-            <li><Link to="/profile" className="nav-link">
+            {/*<li><Link to="/profile" className="nav-link">
               <i className="fas fa-user"></i>
               <span>Profile</span>
             </Link></li>
             <li><Link to="/settings" className="nav-link">
               <i className="fas fa-cog"></i>
               <span>Settings</span>
-            </Link></li>
+            </Link></li>*/}
           </ul>
           <button onClick={handleLogout} className="logout-btn">
             <i className="fas fa-sign-out-alt"></i>
