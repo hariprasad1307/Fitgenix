@@ -20,9 +20,9 @@ function App() {
         {isAuthenticated ? (
           <Route element={<AppLayout setAuth={setIsAuthenticated} />}>
             <Route path="/" element={<Diet />} />
-            <Route path="/profile" element={<Profile />} />
+            {/*<Route path="/profile" element={<Profile />} />*/}
             <Route path="/mydiets" element={<MyDiets />} />
-            <Route path="/settings" element={<Settings />} />
+            {/*<Route path="/settings" element={<Settings />} />*/}
           </Route>
         ) : (
           <Route path="*" element={<Navigate to="/hero" replace />} />
