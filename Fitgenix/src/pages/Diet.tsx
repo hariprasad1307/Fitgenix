@@ -6,6 +6,9 @@ import Dietdata from "../components/Diet/Dietdata";
 import "../styles/diet.css";
 
 const Diet = () => {
+  const apiUrl = import.meta.env.VITE_BACKEND_TYPESCRIPT_URI;
+  const pythonApiUrl = import.meta.env.VITE_BACKEND_PYTHON_URI;
+
   const [dietName, setDietName] = useState("");
   const [dietHeight, setDietHeight] = useState("");
   const [dietWeight, setDietWeight] = useState("");
@@ -42,7 +45,7 @@ const Diet = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `http://127.0.0.1:8000/recommend?calories=${targetCalories}`
+        `${pythonApiUrl}/recommend?calories=${targetCalories}`
       );
       const data = await res.json();
       setRecommendations(data);
@@ -56,7 +59,7 @@ const Diet = () => {
   if (!recommendations) return;
   try {
     setSaving(true);
-    const res = await fetch("http://localhost:3000/api/diets/save", {
+    const res = await fetch(`${apiUrl}/diets/save`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

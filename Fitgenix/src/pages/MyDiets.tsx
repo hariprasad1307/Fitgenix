@@ -29,11 +29,13 @@ interface Diet {
 }
 
 const MyDiets: React.FC = () => {
+    const apiUrl = import.meta.env.VITE_BACKEND_TYPESCRIPT_URI;
+
   const [diets, setDiets] = useState<Diet[]>([]);
   const [expandedId, setExpandedId] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/diets")
+    fetch(`${apiUrl}/diets`)
       .then((res) => res.json())
       .then((data) => setDiets(data))
       .catch((err) => console.error(err));
