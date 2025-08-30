@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
 import type { CalendarHeatmapValue } from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
-import "../styles/profile.css";
+import "../Styles/profile.css";
 
 const Profile: React.FC = () => {
   const [values, setValues] = useState<CalendarHeatmapValue[]>([]);
