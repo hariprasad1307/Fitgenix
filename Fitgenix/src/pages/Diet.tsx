@@ -3,7 +3,7 @@ import Bmi from "../components/Diet/Bmi";
 import Bmr from "../components/Diet/Bmr";
 import Tdee from "../components/Diet/Tdee";
 import Dietdata from "../components/Diet/Dietdata";
-import "../styles/diet.css";
+import "../Styles/diet.css";
 
 const Diet = () => {
   const apiUrl = import.meta.env.VITE_BACKEND_TYPESCRIPT_URI;
